@@ -1,0 +1,26 @@
+body {
+  background: #411152;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  background: #82319E;
+  border: 3px solid #3A5209;
+  box-sizing: 0 0 15px #82319E;
+  width: 50vh;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+}
+.App:hover {
+  box-shadow: 0 0 20px #C860EB;
+}
+
+/*# sourceMappingURL=style.css.map */
