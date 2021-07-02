@@ -1,0 +1,62 @@
+$bg: #411152;
+$btnGray:rgb(70,80,90);
+$main: #82319E;
+$light: #C860EB;
+$contrastDark: #3A5209;
+$contrastLight: #7A9E31;
+
+body{
+	background: $bg;
+	min-height: 100vh;
+	min-width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#drum-machine {
+	background: $main;
+	padding: 30px;
+	border: 3px solid $contrastDark;
+	min-width: 50vh;
+	min-height: 50vh;
+	display: flex;
+	align-items: center;
+	&:hover{
+		box-shadow: 0 0 20px $light;
+	}
+}
+#clip-name {
+	width: 80%;
+	min-height: 50px;
+	text-justify: center;
+	text-align: center;
+}
+#display {
+	width: 50%;
+	height: 100%;
+	padding: 20px;
+}
+#drum-pads {
+	display: grid;
+	grid-gap: 15px;
+	grid-template: repeat(3, 1fr)/ repeat(3, 1fr);
+}
+.drum-pad{
+	margin: 5px;
+	min-height: 100px;
+	aspect-ratio: 1;
+	height: 30%;
+	background: $btnGray;
+	box-shadow: 0 0 0 5px black,
+	0 0 0 10px $btnGray;
+}
+#power {
+	background: black;
+	width: 50px;
+	height: 25px;
+	border: none;
+	&:checked {
+		background: $contrastLight;
+		box-shadow: 0 0 10px $contrastDark;
+	}
+}

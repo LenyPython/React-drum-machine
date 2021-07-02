@@ -1,13 +1,14 @@
 import React from 'react';
 
 
-const Button = (props) => {
-
+const Button = props => {
 
   return (
-    <div className='btn'>
-      <audio href={props.addr} />
-      <p>{props.key}</p>
+    <div className='drum-pad'>
+      <audio id={props.key} className="clip">
+        <source src={props.src} type={props.type} />
+      </audio>
+      <h2>{props.key}</h2>
     </div>
   )
 }

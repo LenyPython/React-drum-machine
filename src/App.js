@@ -1,14 +1,17 @@
 import React from 'react';
+import {useState} from 'react';
 import Buttons from './buttons/Buttons.js';
-import ControlPanel from './controls/ControlPanel.js';
+import Display from './controls/Display.js';
+import './style.css';
 
 
 const App = () => {
+  var [power, setPower] = useState(false);
+
   return (
-    <div className="App">
-      <h1> helllo </h1>
+    <div id="drum-machine">
       <Buttons />
-      <ControlPanel />
+      <Display state={power} onOff={setPower} />
 
     </div>
   );
