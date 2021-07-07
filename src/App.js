@@ -6,21 +6,21 @@ import './style.css';
 
 
 const App = () => {
-  var [power, setPower] = useState(false);
-  var [bank, setBank] = useState(0);
+  var powerControl = useBoolValue(false);
+  var bankControl = useBoolValue(false);
   var [sound, setSound] = useState('');
 
   return (
     <div id="drum-machine">
       <Buttons
-        bank={bank}
+        power={powerControl}
+        bank={bankControl}
         setSound={setSound}
       />
       <Display
-        state={power}
+        power={powerControl}
+        bank={bankControl}
         sound={sound}
-        setBank={setBank}
-        setPower={setPower}
       />
 
     </div>
@@ -29,3 +29,16 @@ const App = () => {
 
 
 export default App;
+
+const useBoolValue = (initialValue) => {
+  const [value, setValue] = useState(initialValue);
+
+  const handleChange = (e) => {
+    setValue(~e.target.value);
+  }
+  return {
+    value,
+    onChange: handleChange
+  };
+
+}

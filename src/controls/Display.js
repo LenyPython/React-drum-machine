@@ -1,15 +1,7 @@
 import React from 'react';
+import './display.css'
 
 const Display = props => {
-
-  const powerOnOff = () => {
-    //read about onChange hooks for generalizing setState
-    props.setPower(~props.state);
-  }
-
-  const displaySound = () => {
-    //need to update text area on change in other component
-  }
   //add an checkbox class for label
   return (
     <div id='display'>
@@ -19,8 +11,7 @@ const Display = props => {
             id='power'
             type='checkbox'
             name='onoff'
-            onChange={powerOnOff}
-            value={props.state}
+            {...props.power}
           />
           <br />
         </label>
@@ -29,15 +20,13 @@ const Display = props => {
             id='bank'
             type='checkbox'
             name='bank'
-            onChange={powerOnOff}
-            value={props.state}
+            {...props.bank}
           />
           <br />
         </label>
         <label> Clip
         <textarea
             id='clip-name'
-            onChange={displaySound}
             value={props.sound}
           />
         </label>
@@ -48,3 +37,4 @@ const Display = props => {
 };
 
 export default Display;
+

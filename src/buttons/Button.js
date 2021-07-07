@@ -1,12 +1,16 @@
 import React from 'react';
+import './btn.css'
 
 
 const Button = props => {
-  //neeed to add sound change on click
   const play = () => {
-    props.setSound(props.id)
-    console.log(props.id)
-  }
+    let audio = document.getElementById(props.text);
+    if (props.power.value) {
+      audio.play();
+      setTimeout(() => props.setSound(''), 1000);
+      props.setSound(props.id)
+    }
+  };
 
   return (
     <div className='drum-pad' onClick={play} >
