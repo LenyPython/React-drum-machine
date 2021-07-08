@@ -13,7 +13,6 @@ const Buttons = props => {
       power={props.power}
       url={item.url}
       text={item.keyTrigger}
-      keyCode={item.keyCode}
       setSound={props.setSound}
     />
   });

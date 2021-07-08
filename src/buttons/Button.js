@@ -1,4 +1,5 @@
 import React from 'react';
+import {useEffect} from 'react';
 import './btn.css'
 
 
@@ -11,6 +12,16 @@ const Button = props => {
       props.setSound(props.id)
     }
   };
+
+  const handleKeyPressed = (e) => {
+    if (e.code == 'Key' + props.text) play()
+  };
+
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyPressed)
+    return () => document.removeEventListener('keydown', handleKeyPressed);
+  })
+
 
   return (
     <div className='drum-pad' onClick={play} >
