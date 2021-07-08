@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import Buttons from './buttons/Buttons.js';
 import Display from './controls/Display.js';
 import './style.css';
@@ -9,6 +9,20 @@ const App = () => {
   var powerControl = useBoolValue(false);
   var bankControl = useBoolValue(false);
   var [sound, setSound] = useState('');
+
+  useEffect(() => {
+    const script = document.createElement('script');
+
+
+    script.src = "https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js";
+    script.async = true;
+
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    }
+  }, []);
 
   return (
     <div id="drum-machine">

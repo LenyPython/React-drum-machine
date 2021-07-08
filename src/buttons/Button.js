@@ -24,7 +24,7 @@ const Button = props => {
 
 
   return (
-    <div className='drum-pad' onClick={play} >
+    <div id={props.id} className='drum-pad' onClick={play} >
       <h2>{props.text}</h2>
       <audio
         id={props.text}

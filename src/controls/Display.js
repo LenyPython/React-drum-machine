@@ -24,13 +24,8 @@ const Display = props => {
           />
           <br />
         </label>
-        <label> Clip
-        <textarea
-            id='clip-name'
-            value={props.sound}
-          />
-        </label>
       </form>
+      {props.sound}
     </div>
   )
 
