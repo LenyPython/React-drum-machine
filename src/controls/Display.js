@@ -6,23 +6,25 @@ const Display = props => {
   return (
     <div id='display'>
       <form>
-        <label className='checkbox'>Power
-        <input
+        <label forHtml='power'>
+          <p>Power</p>
+          <input
             id='power'
             type='checkbox'
             name='onoff'
             {...props.power}
           />
-          <br />
+          <span className='slider'></span>
         </label>
-        <label className='checkbox'>Bank
-        <input
+        <label forHtml='bank'>
+          <p>Bank</p>
+          <input
             id='bank'
             type='checkbox'
             name='bank'
             {...props.bank}
           />
-          <br />
+          <span className='slider'></span>
         </label>
       </form>
       {props.sound}
