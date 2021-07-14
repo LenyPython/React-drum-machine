@@ -14,7 +14,7 @@ const Display = props => {
             name='onoff'
             {...props.power}
           />
-          <span className='slider'></span>
+          <span id='pwr'></span>
         </label>
         <label forHtml='bank'>
           <p>Bank</p>
@@ -22,6 +22,7 @@ const Display = props => {
             id='bank'
             type='checkbox'
             name='bank'
+            className='invisible'
             {...props.bank}
           />
           <span className='slider'></span>

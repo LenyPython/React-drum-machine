@@ -22,9 +22,6 @@ body{
 	min-height: 50vh;
 	display: flex;
 	align-items: center;
-	&:hover{
-		box-shadow: 0 0 20px $light;
-	}
 }
 #clip-name {
 	width: 80%;
@@ -50,14 +47,4 @@ body{
 	background: $btnGray;
 	box-shadow: 0 0 0 5px black,
 	0 0 0 10px $btnGray;
-}
-#power {
-	background: black;
-	width: 50px;
-	height: 25px;
-	border: none;
-	&:checked {
-		background: $contrastLight;
-		box-shadow: 0 0 10px $contrastDark;
-	}
 }
