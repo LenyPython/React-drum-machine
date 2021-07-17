@@ -1,4 +1,5 @@
 import React, {useEffect} from 'react';
+import {powerOn, powerOff} from './displayFunctions.js'
 import './display.css'
 
 const pwrSvg = <svg className='pwrIcon'
@@ -10,28 +11,6 @@ const pwrSvg = <svg className='pwrIcon'
 </svg>
 
 const Display = ({power, bank, sound}) => {
-  const getSlider = () => {
-    let slider = document.querySelector('.bankSlider')
-    slider.classList.remove('light');
-    slider.classList.remove('light2');
-    return slider;
-  }
-  const powerOn = (bankValue) => {
-    let slider = getSlider();
-    if (bankValue) slider.classList.add('light');
-    else slider.classList.add('light2');
-    document.body.classList.add('on');
-    document.body.classList.remove('off');
-    document.getElementById('drum-pads').classList.add('turnedOn');
-  }
-
-  const powerOff = () => {
-    getSlider();
-    document.body.classList.remove('on');
-    document.body.classList.add('off');
-    document.getElementById('drum-pads').classList.remove('turnedOn');;
-  }
-
   useEffect(() => {
     if (power.value) powerOn(bank.value);
     else powerOff();

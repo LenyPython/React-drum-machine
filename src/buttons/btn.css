@@ -6,6 +6,11 @@
   grid-gap: 15px;
   grid-template: repeat(3, 1fr)/repeat(3, 1fr);
 }
+#drum-pads .turnedOn {
+  color: transparent;
+  box-shadow: none;
+  text-shadow: 0 0 1px rgba(255, 0, 0, 0.5);
+}
 
 .drum-pad {
   display: flex;

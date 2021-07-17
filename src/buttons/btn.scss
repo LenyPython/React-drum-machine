@@ -13,6 +13,11 @@ $btnGradient: radial-gradient(
 	display: grid;
 	grid-gap: 15px;
 	grid-template: repeat(3, 1fr)/ repeat(3, 1fr);
+	.turnedOn {
+		color: transparent;
+		box-shadow:none;
+		text-shadow: 0 0 1px hsla(0,100%,50%, 0.5);
+	}
 }
 .drum-pad{
 	display: flex;
