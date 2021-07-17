@@ -7,12 +7,37 @@ $contrastLight: #7A9E31;
 
 body{
 	font-family: 'Alfa Slab One', cursive;
-	background: $bg;
 	min-height: 100vh;
 	min-width: 100vw;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+.off{
+	background: radial-gradient(
+							circle at top 10% left 50%,
+							transparent 0%,
+							hsl(0, 0%, 0%) 10%,
+							transparent 10.5%,
+							hsl(0, 0%, 0%) 12%,
+							transparent 12%,
+							hsl(0, 0%, 0%) 90%,
+							),
+							$main;
+}
+.on{
+	background: radial-gradient(
+							circle at top 10% left 50%,
+							transparent 0%,
+							hsl(0, 0%, 0%) 10%,
+							transparent 10.5%,
+							hsl(0, 0%, 0%) 12%,
+							transparent 12%,
+							hsla(0,100%,50%, 0.2) 25%,
+							transparent 40%,
+							hsl(0, 0%, 0%) 90%,
+							),
+							$main;
 }
 #drum-machine {
 	background: $main;

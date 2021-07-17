@@ -18,6 +18,12 @@ const Display = props => {
     if (props.power.value) {
       if (props.bank.value) slider.classList.add('light');
       else slider.classList.add('light2');
+      document.body.classList.add('on');
+      document.body.classList.remove('off');
+    }
+    else {
+      document.body.classList.remove('on');
+      document.body.classList.add('off');
     }
   }, [props.power.value, props.bank.value])
 

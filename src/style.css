@@ -1,11 +1,18 @@
 body {
   font-family: "Alfa Slab One", cursive;
-  background: #411152;
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.off {
+  background: radial-gradient(circle at top 10% left 50%, transparent 0%, black 10%, transparent 10.5%, black 12%, transparent 12%, black 90%), #1a1a1a;
+}
+
+.on {
+  background: radial-gradient(circle at top 10% left 50%, transparent 0%, black 10%, transparent 10.5%, black 12%, transparent 12%, rgba(255, 0, 0, 0.2) 25%, transparent 40%, black 90%), #1a1a1a;
 }
 
 #drum-machine {
