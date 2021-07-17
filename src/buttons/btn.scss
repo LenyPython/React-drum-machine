@@ -1,0 +1,35 @@
+$btnGray:hsl(0,0%,5%);
+$btnGradient: radial-gradient(
+	circle,
+	$btnGray 50%,
+	black 65%,
+	$btnGray 65%
+);
+
+#drum-pads {
+	background: hsl(0,0%,7%);
+	border: 2px solid black;
+	padding: .5em;
+	display: grid;
+	grid-gap: 15px;
+	grid-template: repeat(3, 1fr)/ repeat(3, 1fr);
+}
+.drum-pad{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 150px;
+	border: 3px solid black;
+	border-radius: 0.8em;
+	aspect-ratio: 1;
+	background: $btnGradient;
+	h2 {
+		font-size: 2em;
+	}
+}
+
+.turnedOn{
+box-shadow: inset 0 0 10em hsla(0,100%,50%,0.3),
+					 inset 0 0 30em hsla(0,100%,50%,0.4);
+}
+

@@ -1,11 +1,23 @@
 $main: hsl(0,0%,10%);
 form{
 	fieldset{
+		height:100%;
 		color: black;
 		border: 3px solid black;
 		legend {
 			text-transform: uppercase;
 			border: 1px solid black;
+		}
+		.displayer {
+		display: block;
+		width: 90%;
+		text-align: center;
+		margin: 2em 0;
+		background: hsl(0,0%,0%);
+		color: transparent;
+		text-shadow: -1px -1px 2px hsla(0,100%,50%,0.8);
+		padding: 0.5em;
+		cursor:unset;
 		}
 }
 }

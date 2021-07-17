@@ -1,9 +1,5 @@
-$bg: #411152;
-$btnGray:rgb(70,80,90);
 $main: hsl(0,0%,10%);
-$light: #C860EB;
-$contrastDark: #3A5209;
-$contrastLight: #7A9E31;
+$black: black;
 
 body{
 	font-family: 'Alfa Slab One', cursive;
@@ -42,11 +38,10 @@ body{
 #drum-machine {
 	background: $main;
 	padding: 30px;
-	border: 3px solid $contrastDark;
+	border: 5px solid black;
 	min-width: 50vh;
 	min-height: 50vh;
 	display: flex;
-	align-items: center;
 }
 #clip-name {
 	width: 80%;
@@ -58,18 +53,4 @@ body{
 	width: 50%;
 	height: 100%;
 	padding: 20px;
-}
-#drum-pads {
-	display: grid;
-	grid-gap: 15px;
-	grid-template: repeat(3, 1fr)/ repeat(3, 1fr);
-}
-.drum-pad{
-	margin: 5px;
-	min-height: 100px;
-	aspect-ratio: 1;
-	height: 30%;
-	background: $btnGray;
-	box-shadow: 0 0 0 5px black,
-	0 0 0 10px $btnGray;
 }
